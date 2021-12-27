@@ -1,0 +1,313 @@
+    .conShow>div,
+    .Css>div,
+    .Java>div {
+        background-color: coral;
+        box-shadow: 2px 2px 2px grey;
+        border-radius: 10px;
+        width: 320px;
+        padding: 20px;
+    }
+    
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #cend {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+    }
+    
+    .conShow>div>label,
+    .Css>div>label,
+    .Java>div>label {
+        color: white;
+    }
+    
+    #cend>main>div {
+        margin-bottom: 10px;
+        background-color: coral;
+        margin-left: 10px;
+    }
+    
+    #cend>main>div>p {
+        width: 220px;
+    }
+    
+    .show {
+        display: block;
+        animation-name: appear;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+    }
+    
+    #sp,
+    #cp,
+    #jp {
+        display: none;
+        top: 30px;
+    }
+    
+    .conShow,
+    .Css,
+    .Java {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 40px;
+    }
+    
+    .FrontShow>button,
+    #sp,
+    #cp,
+    #jp,
+    #sub,
+    #quizend,
+    #view,
+    #next,
+    .Corrections>button {
+        background-color: green;
+        color: white;
+        border: none;
+        outline: none;
+        width: 150px;
+        height: 50px;
+        position: relative;
+        border-radius: 50px;
+    }
+    
+    .FrontShow>button,
+    #sp,
+    #cp,
+    #jp,
+    #sub,
+    #quizend,
+    #view,
+    #next:hover {
+        cursor: pointer;
+    }
+    
+    button:disabled {
+        cursor: not-allowed;
+        background-color: grey;
+    }
+    
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: perspective(400px) rotateY(0);
+        }
+        100% {
+            opacity: 1;
+            transform: perspective(400px) rotateY(-180deg);
+        }
+    }
+    
+    .FrontHide {
+        display: none;
+    }
+    
+    .FrontShow {
+        display: flex;
+        justify-content: space-evenly;
+        animation-name: slideDown;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        transform: translateY(30px);
+    }
+    
+    .CssHide,
+    .hide,
+    .conHide,
+    .JavaHide,
+    .ResultHide,
+    .instructHide,
+    .table,
+    .Display,
+    .CorrectionsHide {
+        display: none;
+    }
+    
+    .table {
+        position: relative;
+        top: 40px;
+    }
+    
+    .Result {
+        background-color: yellow;
+        box-shadow: 2px 2px 2px grey;
+        border-radius: 10px;
+        width: 320px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        animation-name: slideDown;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        transform: translateY(30px);
+    }
+    
+    #view {
+        background-color: red;
+    }
+    
+    .Result>h2 {
+        font-family: algerian;
+    }
+    
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-500px);
+        }
+        100% {
+            transform: translateY(50px);
+        }
+    }
+    
+    .instructHide {
+        animation-name: appear;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1
+    }
+    
+    .instructions {
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation-name: slideDown;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        transform: translateY(30px);
+    }
+    
+    ol>li {
+        padding-bottom: 10px;
+        color: whitesmoke;
+    }
+    
+    input[type="text"] {
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 16px;
+        padding-left: 15px;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+        width: 200px;
+        height: 40px;
+    }
+    
+    input[type="text"]:focus {
+        outline: none;
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 16px;
+        padding-left: 10px;
+        border: 2px ridge blue;
+    }
+    
+    #sub,
+    #quizend {
+        margin-top: 20px;
+    }
+    
+    @media (max-width:900px) {
+        #cend {
+            grid-template-columns: 100%;
+        }
+        #cend>main>div {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        #cend>main>div>p {
+            width: 80%;
+        }
+        .FrontShow>button,
+        #sp,
+        #cp,
+        #jp,
+        #sub,
+        #quizend,
+        #view,
+        #next {
+            width: 100px;
+            height: 40px;
+        }
+        button:disabled {
+            cursor: not-allowed;
+            background-color: grey;
+        }
+        .instructions>h1,
+        .instructions>p,
+        .instructions>label {
+            text-align: center;
+        }
+    }
+    
+    .questionHide {
+        display: none;
+    }
+    
+    .questionShow {
+        position: relative;
+        text-align: center;
+        top: 30px;
+    }
+    
+    @media(max-width: 500px) {
+        .FrontShow {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .FrontShow>button {
+            margin-bottom: 10px;
+            width: 150px;
+        }
+        .conShow>div,
+        .Css>div,
+        .Java>div {
+            width: 50%;
+            padding: 15px;
+        }
+        .conShow>div>p,
+        .Css>div>p,
+        .Java>div>p {
+            width: 80%;
+            padding: 0px;
+        }
+        input[type="text"] {
+            width: 120px;
+            height: 30px;
+            margin-left: 10px;
+        }
+        input[type="text"]:focus {
+            font-size: 14px;
+            width: 120px;
+            height: 30px;
+        }
+    }
+    
+    @media(max-width:200px) {
+        input[type="text"] {
+            width: 100px;
+            height: 30px;
+        }
+        input[type="text"]:focus {
+            font-size: 14px;
+        }
+    }
