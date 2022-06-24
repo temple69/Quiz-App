@@ -1,64 +1,278 @@
-    .conShow>div,
-    .Css>div,
-    .Java>div {
-        background-color: coral;
-        box-shadow: 2px 2px 2px grey;
-        border-radius: 10px;
-        width: 320px;
-        padding: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+.conShow>div,
+.Css>div,
+.Java>div {
+    background-color: coral;
+    box-shadow: 2px 2px 6px 2px inset grey;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    ;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#cend {
+    display: grid;
+    grid-template-columns: repeat(auto-fit minmax(20%, 1fr));
+    gap: 4em;
+    margin-top: 4em;
+}
+
+.conShow>div>label,
+.Css>div>label,
+.Java>div>label {
+    color: white;
+}
+
+#cend>main>div {
+    margin-bottom: 10px;
+    background-color: coral;
+    margin-left: 10px;
+}
+
+#cend>main>div>p {
+    width: 220px;
+}
+
+
+/* Styling for show class*/
+
+.show {
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+#sp,
+#cp,
+#jp {
+    display: none;
+    top: 30px;
+}
+
+.conShow,
+.Css,
+.Java {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+    flex-wrap: wrap;
+    margin: 0 1em;
+    gap: 2em;
+}
+
+
+/* Styling forall buttons*/
+
+.FrontShow>button,
+#sp,
+#cp,
+#jp,
+#sub,
+#quizend,
+#view,
+#next,
+.Corrections>button {
+    background-color: green;
+    color: white;
+    border: none;
+    outline: none;
+    width: 150px;
+    position: relative;
+    border-radius: 30px;
+    height: 50px;
+}
+
+#sub {
+    width: 50%;
+    min-width: 150px
+}
+
+#quizend {
+    background-color: rgb(27, 41, 6);
+}
+
+.FrontShow>button,
+#sp,
+#cp,
+#jp,
+#sub,
+#quizend,
+#view,
+#next:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: grey;
+}
+
+
+/* flip over animations*/
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: perspective(400px) rotateY(0);
     }
-    
-    body {
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
+    100% {
+        opacity: 1;
+        transform: perspective(400px) rotateY(-180deg);
+        background-color: green;
     }
-    
+}
+
+.FrontHide {
+    display: none;
+}
+
+.FrontShow {
+    display: flex;
+    justify-content: space-evenly;
+    animation-name: slideDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    transform: translateY(30px);
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.CssHide,
+.hide,
+.conHide,
+.JavaHide,
+.ResultHide,
+.instructHide,
+.table,
+.Display,
+.CorrectionsHide {
+    display: none;
+}
+
+.table {
+    position: relative;
+    top: 40px;
+}
+
+.Result {
+    border-radius: 10px;
+    width: 20%;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    animation-name: slideDown;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    transform: translateY(60px);
+    border-radius: 20px;
+    justify-content: center;
+    background-color: green;
+    margin: 0 2em;
+    gap: 2em;
+    padding: 5em 0;
+    min-width: 250px
+}
+
+#view {
+    background-color: red;
+}
+
+.Result>h2 {
+    width: 40%;
+    font-size: 1.5em;
+    font-family: 'Staatliches', cursive;
+    color: aliceblue;
+}
+
+
+/* Slidng down animations*/
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+.instructHide {
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1
+}
+
+.instructions {
+    background-color: rgb(190, 81, 42);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: slideDown;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    transform: translateY(30px);
+    padding-bottom: 2em;
+}
+
+ol>li {
+    padding-bottom: 10px;
+    color: whitesmoke;
+}
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    padding-left: 15px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    width: 200px;
+    height: 40px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 2px ridge blue;
+}
+
+#sub,
+#quizend {
+    margin-top: 20px;
+}
+
+@media (max-width:900px) {
     #cend {
-        display: grid;
-        grid-template-columns: repeat(3, 30%);
+        grid-template-columns: 100%;
     }
-    
-    .conShow>div>label,
-    .Css>div>label,
-    .Java>div>label {
-        color: white;
-    }
-    
     #cend>main>div {
         margin-bottom: 10px;
-        background-color: coral;
-        margin-left: 10px;
+        width: 100%;
     }
-    
     #cend>main>div>p {
-        width: 220px;
+        width: 80%;
     }
-    
-    .show {
-        display: block;
-        animation-name: appear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-    }
-    
-    #sp,
-    #cp,
-    #jp {
-        display: none;
-        top: 30px;
-    }
-    
-    .conShow,
-    .Css,
-    .Java {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        top: 40px;
-    }
-    
     .FrontShow>button,
     #sp,
     #cp,
@@ -66,248 +280,64 @@
     #sub,
     #quizend,
     #view,
-    #next,
-    .Corrections>button {
-        background-color: green;
-        color: white;
-        border: none;
-        outline: none;
-        width: 150px;
-        height: 50px;
-        position: relative;
-        border-radius: 50px;
+    #next {
+        width: 100px;
+        height: 40px;
     }
-    
-    .FrontShow>button,
-    #sp,
-    #cp,
-    #jp,
-    #sub,
-    #quizend,
-    #view,
-    #next:hover {
-        cursor: pointer;
-    }
-    
     button:disabled {
         cursor: not-allowed;
         background-color: grey;
     }
-    
-    @keyframes appear {
-        0% {
-            opacity: 0;
-            transform: perspective(400px) rotateY(0);
-        }
-        100% {
-            opacity: 1;
-            transform: perspective(400px) rotateY(-180deg);
-        }
+    .instructions>h1,
+    .instructions>p,
+    .instructions>label {
+        text-align: center;
     }
-    
-    .FrontHide {
-        display: none;
-    }
-    
+}
+
+.questionHide {
+    display: none;
+}
+
+.questionShow {
+    position: relative;
+    text-align: center;
+    top: 30px;
+}
+
+@media(max-width: 500px) {
     .FrontShow {
         display: flex;
+        flex-direction: column;
         justify-content: space-evenly;
-        animation-name: slideDown;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-        transform: translateY(30px);
-    }
-    
-    .CssHide,
-    .hide,
-    .conHide,
-    .JavaHide,
-    .ResultHide,
-    .instructHide,
-    .table,
-    .Display,
-    .CorrectionsHide {
-        display: none;
-    }
-    
-    .table {
-        position: relative;
-        top: 40px;
-    }
-    
-    .Result {
-        background-color: yellow;
-        box-shadow: 2px 2px 2px grey;
-        border-radius: 10px;
-        width: 320px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 2em;
         align-items: center;
-        width: 100%;
-        animation-name: slideDown;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-        transform: translateY(30px);
     }
-    
-    #view {
-        background-color: red;
+    .FrontShow>button {
+        margin-bottom: 10px;
+        width: 150px;
     }
-    
-    .Result>h2 {
-        font-family: algerian;
+    .conShow>div,
+    .Css>div,
+    .Java>div {
+        width: 50%;
+        padding: 15px;
     }
-    
-    @keyframes slideDown {
-        0% {
-            opacity: 0;
-            transform: translateY(-500px);
-        }
-        100% {
-            transform: translateY(50px);
-        }
+    .conShow>div>p,
+    .Css>div>p,
+    .Java>div>p {
+        width: 80%;
+        padding: 0px;
     }
-    
-    .instructHide {
-        animation-name: appear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1
-    }
-    
-    .instructions {
-        background-color: blue;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        animation-name: slideDown;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-        transform: translateY(30px);
-    }
-    
-    ol>li {
-        padding-bottom: 10px;
-        color: whitesmoke;
-    }
-    
     input[type="text"] {
-        border: none;
-        outline: none;
-        border-radius: 10px;
-        font-size: 16px;
-        padding-left: 15px;
-        border-right: none;
-        border-left: none;
-        border-top: none;
-        width: 200px;
-        height: 40px;
+        width: 120px;
+        height: 30px;
+        margin-left: 10px;
     }
-    
     input[type="text"]:focus {
-        outline: none;
-        width: 200px;
-        height: 40px;
-        border-radius: 10px;
-        font-size: 16px;
-        padding-left: 10px;
-        border: 2px ridge blue;
+        font-size: 14px;
+        width: 120px;
+        height: 30px;
     }
-    
-    #sub,
-    #quizend {
-        margin-top: 20px;
-    }
-    
-    @media (max-width:900px) {
-        #cend {
-            grid-template-columns: 100%;
-        }
-        #cend>main>div {
-            margin-bottom: 10px;
-            width: 100%;
-        }
-        #cend>main>div>p {
-            width: 80%;
-        }
-        .FrontShow>button,
-        #sp,
-        #cp,
-        #jp,
-        #sub,
-        #quizend,
-        #view,
-        #next {
-            width: 100px;
-            height: 40px;
-        }
-        button:disabled {
-            cursor: not-allowed;
-            background-color: grey;
-        }
-        .instructions>h1,
-        .instructions>p,
-        .instructions>label {
-            text-align: center;
-        }
-    }
-    
-    .questionHide {
-        display: none;
-    }
-    
-    .questionShow {
-        position: relative;
-        text-align: center;
-        top: 30px;
-    }
-    
-    @media(max-width: 500px) {
-        .FrontShow {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        .FrontShow>button {
-            margin-bottom: 10px;
-            width: 150px;
-        }
-        .conShow>div,
-        .Css>div,
-        .Java>div {
-            width: 50%;
-            padding: 15px;
-        }
-        .conShow>div>p,
-        .Css>div>p,
-        .Java>div>p {
-            width: 80%;
-            padding: 0px;
-        }
-        input[type="text"] {
-            width: 120px;
-            height: 30px;
-            margin-left: 10px;
-        }
-        input[type="text"]:focus {
-            font-size: 14px;
-            width: 120px;
-            height: 30px;
-        }
-    }
-    
-    @media(max-width:200px) {
-        input[type="text"] {
-            width: 100px;
-            height: 30px;
-        }
-        input[type="text"]:focus {
-            font-size: 14px;
-        }
-    }
+}
