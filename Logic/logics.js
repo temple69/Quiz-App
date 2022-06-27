@@ -1,26 +1,27 @@
-let con = document.getElementById("conHtml");
-let jAnswers = ["Scripting", "Loosely", "Arrow", "Ternary", "Not", "Annonymous", "Then",  "anchor", "js", "upload"]
-let Cssoptions = document.querySelectorAll(".CssHide>div>label>input[type='radio']")
-let cDiv = document.querySelectorAll(".CssHide>div")
-let conJs = document.getElementById("conJs")
-let conCss = document.getElementById("conCss")
-let Joptions = document.querySelectorAll(".JavaHide>div>label>input[type='radio']")
-let jDiv = document.querySelectorAll(".JavaHide>div")
-let htmloptions = document.querySelectorAll(".conHide>div>label>input[type='radio']")
-let Hbtn = document.getElementById("sp")
-let Cbtn = document.getElementById("cp")
-let Jbtn = document.getElementById("jp")
-let correctAnswers = [];
-let cCorrect = []
-let jCorrect = []
-let allDiv = document.querySelectorAll(".conHide>div")
-let answers = ["HyperTextMarkUpLanguage", "Anchor", "Web", "ordered", "blank",  "division", "Required", "Mail", "Consortium",  "Engine"
-]
-let cAnswers = ["CascadingStyleSheet", "Six", "Asterisk", "Child", "Green",
+//Global Variable Naming Starts here
+let con = document.getElementById("conHtml"),
+ jAnswers = ["Scripting", "Loosely", "Arrow", "Ternary", "Not", "Annonymous", "Then",  "anchor", "js", "upload"],
+ Cssoptions = document.querySelectorAll(".CssHide>div>label>input[type='radio']"),
+ cDiv = document.querySelectorAll(".CssHide>div"),
+ conJs = document.getElementById("conJs"),
+ conCss = document.getElementById("conCss"),
+ Joptions = document.querySelectorAll(".JavaHide>div>label>input[type='radio']"),
+ jDiv = document.querySelectorAll(".JavaHide>div"),
+ htmloptions = document.querySelectorAll(".conHide>div>label>input[type='radio']"),
+ Hbtn = document.getElementById("sp"),
+ Cbtn = document.getElementById("cp"),
+ Jbtn = document.getElementById("jp"),
+ correctAnswers = [],
+ cCorrect = [],
+ jCorrect = [],
+ allDiv = document.querySelectorAll(".conHide>div")
+ answers = ["HyperTextMarkUpLanguage", "Anchor", "Web", "ordered", "blank",  "division", "Required", "Mail", "Consortium",  "Engine"
+],
+ cAnswers = ["CascadingStyleSheet", "Six", "Asterisk", "Child", "Green",
     "Transition", "Visible", "AlignItems", "Area",
     "Responsive", 
-]
-let vew = document.getElementById("view"),
+],
+vew = document.getElementById("view"),
 correctOnes = document.getElementById("correct"),
 failed = document.getElementById("failed"),
  percent = document.getElementById("Percent"),
@@ -39,13 +40,14 @@ next = document.getElementById("next"),
 instruct = document.getElementById("instruct"),
 PlayerNames = [],
 LeaderBoard = {},
-player = document.getElementById("player"),
 sub = document.getElementById("sub"),
 end = document.getElementById("end"),
 endQuiz = document.getElementById("quizend"),
 tab = document.getElementById("table"),
  answered = document.getElementById("answered"),
-count = 0
+count = 0,
+alloptions= document.querySelectorAll("section>div>label>input[type='radio']")
+ let allAnswers=[...answers,...cAnswers,...jAnswers]
 //Logic For Corrections
  function Corrections() {
     cend.classList.add("Corrections");
@@ -56,45 +58,26 @@ count = 0
     conCss.classList.remove("CssHide")
     conJs.classList.add("Java")
     conJs.classList.remove("JavaHide")
-    cend.appendChild(con)
-    cend.appendChild(conCss)
-    cend.appendChild(conJs)
+    cend.append(con,conCss,conJs)
     
     for(let s=0; s<allDiv.length; s++){
         //this block removes the class of hide
         allDiv[s].classList.remove('hide')
         cDiv[s].classList.remove('hide')
         jDiv[s].classList.remove("hide")
+        allDiv[10].classList.add('hide')
+        cDiv[10].classList.add('hide')
+        jDiv[10].classList.add('hide')
     }
-    for (let html of htmloptions) {
+    for (let options of alloptions) {
         //this block compares user option against answers
-        answers.forEach(cht => {
-            if (html.checked && html.value === cht) {
-                html.parentElement.style.color = "green"
-            } else if (!html.checked && html.value === cht) {
-                html.parentElement.style.color = "blue"
+         allAnswers.forEach(ans => {
+            if (options.checked && options.value === ans) {
+                options.parentElement.style.color = "green"
+            } else if (!options.checked && options.value === ans) {
+                options.parentElement.style.color = "blue"
             }
-        })
-    }
-    for (let css of Cssoptions) {
-        //this block compares user option against answers
-        cAnswers.forEach(cst => {
-            if (css.checked && css.value == cst) {
-                css.parentElement.style.color = "green"
-            } else if (!css.checked && css.value === cst) {
-                css.parentElement.style.color = "blue"
-            }
-        })
-    }
-    for (let jsoptions of Joptions) {
-        //this block compares user option against answers
-        jAnswers.forEach(cjt => {
-            if (jsoptions.checked && jsoptions.value == cjt) {
-                jsoptions.parentElement.style.color = "green"
-            } else if (!jsoptions.checked && jsoptions.value === cjt) {
-                jsoptions.parentElement.style.color = "blue"
-            }
-        })
+        }) 
     }
 }
 function HtmlNextLogic(){

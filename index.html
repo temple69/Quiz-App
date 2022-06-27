@@ -10,322 +10,335 @@
 </head>
 
 <body>
-    <div class="instructions" id="instruct">
-        <h1>Welcome to the FrontEnd Development Quiz</h1>
-        <p>This Quiz Will Test Your Knowledge In FrontEnd Development</p>
-        <h3>INSTRUCTIONS AND RULES</h3>
-        <ol>
-            <li>The Quiz Consist of Html,Css and Javascript Section</li>
-            <li>Each Section Consist Of 10 Questions</li>
-            <li>Choose Answers Wisely Because Once You Have Answered You Move To The Next Question</li>
-            <li>Enter Your Name In The Box And Start When You Are Ready</li>
-            <li>The Green Background Indicates The Current Section You Are In</li>
-            <li>Click The Button To Start</li>
-            <li>In the Answer Section Green-color Means Correct option Blue Color Means a failed question with blue as the correct option</li>
-            <li>To End Quiz if Finished Click The End Quiz Button under Quiz Statistics</li>
-        </ol>
-        <label>Enter Your Name:&nbsp;<input type="text" id="player" placeholder="Name"></label>
-        <button type="submit" id="sub">Start Quiz</button>
-    </div>
-    <div class="FrontHide" id="end">
-        <button>Html</button>
-        <button disabled> Css</button>
-        <button disabled> Javascript</button>
-        <button disabled>Corrections</button>
-        <button disabled>Quiz Statistics</button>
-    </div>
     <main>
-        <div class="ResultHide" id="res">
-            <h2 id="congrat"></h2>
-            <button id="view">View Quiz Statistics</button>
-            <button id="quizend"> End Quiz</button>
-            <div class="Display" id="dis">
-                <h2></h2>
-                <h2></h2>
+        <!-- Instructions section -->
+        <div class="instructions" id="instruct">
+            <h1>Welcome to the FrontEnd Development Quiz</h1>
+            <p>This Quiz Will Test Your Knowledge In FrontEnd Development</p>
+            <h3>INSTRUCTIONS AND RULES</h3>
+            <ol>
+                <li>The Quiz Consist of Html,Css and Javascript Section</li>
+                <li>Each Section Consist Of 10 Questions</li>
+                <li>Choose Answers Wisely Because Once You Have Answered You Move To The Next Question</li>
+                <li>Enter Your Name In The Box And Start When You Are Ready</li>
+                <li>The Green Background Indicates The Current Section You Are In</li>
+                <li>Click The Button To Start</li>
+                <li>In the Answer Section Green-color Means Correct option Blue Color Means a failed question with blue as the correct option</li>
+                <li>To End Quiz if Finished Click The End Quiz Button under Quiz Statistics</li>
+            </ol>
+            <label>Enter Your Name:&nbsp;<input type="text" id="player" placeholder="Name"></label>
+            <button type="submit" id="sub">Start Quiz</button>
+        </div>
+        <div class="FrontHide" id="end">
+            <!-- Quiz Section Buttons -->
+            <button>Html</button>
+            <button disabled> Css</button>
+            <button disabled> Javascript</button>
+            <button disabled>Corrections</button>
+            <button disabled>Quiz Statistics</button>
+        </div>
+        <main>
+            <div class="ResultHide" id="res">
+                <h2 id="congrat"></h2>
+                <button id="view">View Quiz Statistics</button>
+                <button id="quizend"> End Quiz</button>
+                <div class="Display" id="dis">
+                    <h2></h2>
+                    <h2></h2>
+                </div>
             </div>
+        </main>
+        <section class="CorrectionsHide" id="cend">
+        </section>
+        <div class="questionHide" id="questions">
+            <h3 id="answered">Questions Answered:0/10</h3>
         </div>
-    </main>
-    <section class="CorrectionsHide" id="cend">
-    </section>
-    <div class="questionHide" id="questions">
-        <h3 id="answered">Questions Answered:0/10</h3>
-    </div>
 
 
 
-    <!--Questions for Html-->
-    <main class="conHide" id="conHtml">
-        <div class="show">
-            <p>1:&nbsp;What is Html</p>
-            <label><input type="radio" name="H" value="HyperTextMarkUpLogo"> Hyper-Text-Mark-Up-Logo<br><br></label>
-            <label><input type="radio" name="H" value="HighTextMarkLanguage"> Higher-Text-Mark-Language<br><br></label>
-            <label><input type="radio" name="H" value="HyperTextMarkUpLanguage"> Hyper-Text-Mark-Up-Language<br><br></label>
-            <label><input type="radio" name="H" value="HyperTotalMarkLanguage"> Hype-Total-Mark-Language<br><br></label>
-        </div>
-        <div class="hide">
-            <p>2:&nbsp;Which Tag Is Used To Create Links</p>
-            <label><input type="radio" name="T" value="Header"> <code>h1</code><br><br></label>
-            <label><input type="radio" name="T" value="Anchor"> <code>a</code><br><br></label>
-            <label><input type="radio" name="T" value="Paragraph"> <code>p</code><br><br></label>
-            <label><input type="radio" name="T" value="image"> <code>img</code><br><br></label>
-        </div>
-        <div class="hide">
-            <p>3:&nbsp;What Is The Full Meaning Of WWW</p>
-            <label><input type="radio" name="M" value="World"> Watch Wide Web <br><br></label>
-            <label><input type="radio" name="M" value="Wide"> Wide World Watch <br><br></label>
-            <label><input type="radio" name="M" value="Watch"> World Wide Watch <br><br></label>
-            <label><input type="radio" name="M" value="Web"> World Wide Web <br><br></label>
-        </div>
-        <div class="hide">
-            <p>4:&nbsp;What is The Tag For Declaring an Ordered List</p>
-            <label><input type="radio" name="L" value="breaktag"> <code>br</code><br><br></label>
-            <label><input type="radio" name="L" value="divisior"> <code>div</code><br><br></label>
-            <label><input type="radio" name="L" value="ordered"> <code>ol</code><br><br></label>
-            <label><input type="radio" name="L" value="unordered"> <code>ul</code><br><br></label>
-        </div>
-        <div class="hide">
-            <p>5:&nbsp;Which of This When applied To a link Will Open The Link in a New Page</p>
-            <label><input type="radio" name="C" value="self"> target = _self <br><br></label>
-            <label><input type="radio" name="C" value="new"> target = _new <br><br></label>
-            <label><input type="radio" name="C" value="parent"> target = _parent <br><br></label>
-            <label><input type="radio" name="C" value="blank"> target =_blank <br><br></label>
-        </div>
-        <div class="hide">
-            <p>6:&nbsp;The main function of the meta tag
-            </p>
-            <label><input type="radio" name="p" value="Proper"> Proper Documentation<br><br></label>
-            <label><input type="radio" name="p" value="Engine"> Search Engine Optimization<br><br></label>
-            <label><input type="radio" name="p" value="DocInfo"> Giving information about the document<br><br></label>
-            <label><input type="radio" name="p" value="BrowInfo"> Gives information about the browswer<br><br></label>
-        </div>
-        <div class="hide">
-            <p>7:&nbsp;Choose the Odd One</p>
-            <label><input type="radio" name="e" value="Main"> Main <br><br>
+        <!--Questions for Html-->
+        <section class="conHide" id="conHtml">
+            <div class="show">
+                <p>1:&nbsp;What is Html</p>
+                <label><input type="radio" name="H" value="HyperTextMarkUpLogo"> Hyper-Text-Mark-Up-Logo<br><br></label>
+                <label><input type="radio" name="H" value="HighTextMarkLanguage"> Higher-Text-Mark-Language<br><br></label>
+                <label><input type="radio" name="H" value="HyperTextMarkUpLanguage"> Hyper-Text-Mark-Up-Language<br><br></label>
+                <label><input type="radio" name="H" value="HyperTotalMarkLanguage"> Hype-Total-Mark-Language<br><br></label>
+            </div>
+            <div class="hide">
+                <p>2:&nbsp;Which Tag Is Used To Create Links</p>
+                <label><input type="radio" name="T" value="Header"> <code>h1</code><br><br></label>
+                <label><input type="radio" name="T" value="Anchor"> <code>a</code><br><br></label>
+                <label><input type="radio" name="T" value="Paragraph"> <code>p</code><br><br></label>
+                <label><input type="radio" name="T" value="image"> <code>img</code><br><br></label>
+            </div>
+            <div class="hide">
+                <p>3:&nbsp;What Is The Full Meaning Of WWW</p>
+                <label><input type="radio" name="M" value="World"> Watch Wide Web <br><br></label>
+                <label><input type="radio" name="M" value="Wide"> Wide World Watch <br><br></label>
+                <label><input type="radio" name="M" value="Watch"> World Wide Watch <br><br></label>
+                <label><input type="radio" name="M" value="Web"> World Wide Web <br><br></label>
+            </div>
+            <div class="hide">
+                <p>4:&nbsp;What is The Tag For Declaring an Ordered List</p>
+                <label><input type="radio" name="L" value="breaktag"> <code>br</code><br><br></label>
+                <label><input type="radio" name="L" value="divisior"> <code>div</code><br><br></label>
+                <label><input type="radio" name="L" value="ordered"> <code>ol</code><br><br></label>
+                <label><input type="radio" name="L" value="unordered"> <code>ul</code><br><br></label>
+            </div>
+            <div class="hide">
+                <p>5:&nbsp;Which of This When applied To a link Will Open The Link in a New Page</p>
+                <label><input type="radio" name="C" value="self"> target = _self <br><br></label>
+                <label><input type="radio" name="C" value="new"> target = _new <br><br></label>
+                <label><input type="radio" name="C" value="parent"> target = _parent <br><br></label>
+                <label><input type="radio" name="C" value="blank"> target =_blank <br><br></label>
+            </div>
+            <div class="hide">
+                <p>6:&nbsp;The main function of the meta tag
+                </p>
+                <label><input type="radio" name="p" value="Proper"> Proper Documentation<br><br></label>
+                <label><input type="radio" name="p" value="Engine"> Search Engine Optimization<br><br></label>
+                <label><input type="radio" name="p" value="DocInfo"> Giving information about the document<br><br></label>
+                <label><input type="radio" name="p" value="BrowInfo"> Gives information about the browswer<br><br></label>
+            </div>
+            <div class="hide">
+                <p>7:&nbsp;Choose the Odd One</p>
+                <label><input type="radio" name="e" value="Main"> Main <br><br>
             </label>
-            <label><input type="radio" name="e" value="Aside"> Aside <br><br>
+                <label><input type="radio" name="e" value="Aside"> Aside <br><br>
             </label>
-            <label><input type="radio" name="e" value="Article"> Article <br><br>
+                <label><input type="radio" name="e" value="Article"> Article <br><br>
             </label>
-            <label><input type="radio" name="e" value="division"> Divison<br><br>
+                <label><input type="radio" name="e" value="division"> Divison<br><br>
             </label>
-        </div>
-        <div class="hide">
-            <p>8:&nbsp;Wich of the following Attributes is used for form validation</p>
-            <label><input type="radio" name="a" value="PlaceHolder"> PlaceHolder<br><br></label>
-            <label><input type="radio" name="a" value="Required"> Required <br><br></label>
-            <label><input type="radio" name="a" value="Value"> Value<br><br></label>
-            <label><input type="radio" name="a" value="Validated"> Validated<br><br></label>
-        </div>
-        <div class="hide">
-            <p>9:&nbsp;Who is Making The Web Standards
-            </p>
-            <label><input type="radio" name="j" value="Facebook"> Facebook<br><br></label>
-            <label><input type="radio" name="j" value="Amazon"> Amazon<br><br></label>
-            <label><input type="radio" name="j" value="Google"> Google<br><br></label>
-            <label><input type="radio" name="j" value="Consortium"> World-Wide-Web-Consortium<br><br></label>
-        </div>
-        <div class="hide">
-            <p>10:&nbsp;To link To an email Adresss which Attributes is Used
-            </p>
-            <label><input type="radio" name="f" value="href"> href<br><br></label>
-            <label><input type="radio" name="f" value="email"> Email <br><br></label>
-            <label><input type="radio" name="f" value="Mail"> Mailto<br><br></label>
-            <label><input type="radio" name="f" value="anc"> A<br><br></label>
-        </div>
+            </div>
+            <div class="hide">
+                <p>8:&nbsp;Wich of the following Attributes is used for form validation</p>
+                <label><input type="radio" name="a" value="PlaceHolder"> PlaceHolder<br><br></label>
+                <label><input type="radio" name="a" value="Required"> Required <br><br></label>
+                <label><input type="radio" name="a" value="Value"> Value<br><br></label>
+                <label><input type="radio" name="a" value="Validated"> Validated<br><br></label>
+            </div>
+            <div class="hide">
+                <p>9:&nbsp;Who is Making The Web Standards
+                </p>
+                <label><input type="radio" name="j" value="Facebook"> Facebook<br><br></label>
+                <label><input type="radio" name="j" value="Amazon"> Amazon<br><br></label>
+                <label><input type="radio" name="j" value="Google"> Google<br><br></label>
+                <label><input type="radio" name="j" value="Consortium"> World-Wide-Web-Consortium<br><br></label>
+            </div>
+            <div class="hide">
+                <p>10:&nbsp;To link To an email Adresss which Attributes is Used
+                </p>
+                <label><input type="radio" name="f" value="href"> href<br><br></label>
+                <label><input type="radio" name="f" value="email"> Email <br><br></label>
+                <label><input type="radio" name="f" value="Mail"> Mailto<br><br></label>
+                <label><input type="radio" name="f" value="anc"> A<br><br></label>
+            </div>
+            <div class="hide" id="not-shown">
+                <button class="anime">End Of Html Quiz</button>
+            </div>
 
+        </section>
+        <!--Questions For Css-->
+        <section class="CssHide" id="conCss">
+            <div class="show">
+                <p>1:&nbsp;What is Css</p>
+                <label><input type="radio" name="Aa" value="CrossStyleSheet"> CrossStyleSheet<br><br></label>
+                <label><input type="radio" name="Aa" value="CascadeStylingSheet"> CascadeStylingSheet<br><br></label>
+                <label><input type="radio" name="Aa" value="CascadingStyleSheet"> CascadingStyleSheet<br><br></label>
+                <label><input type="radio" name="Aa" value="ColorStylerSheet"> ColorStylerSheet<br><br></label>
+            </div>
+            <div class="hide">
+                <p>2:&nbsp;Which Of This Is a Property of Flex-container
+                </p>
+                <label><input type="radio" name="Oo" value="AlignItems"> Align-items<br><br></label>
+                <label><input type="radio" name="Oo" value="Align-Self"> Align-Self<br><br></label>
+                <label><input type="radio" name="Oo" value="Grow"> flex-grow<br><br></label>
+                <label><input type="radio" name="Oo" value="Order"> order<br><br></label>
+            </div>
+
+            <div class="hide">
+                <p>3:&nbsp;In how many ways can color be initialized including alpha values</p>
+                <label><input type="radio" name="Cc" value="Four"> 4 <br><br></label>
+                <label><input type="radio" name="Cc" value="Six"> 6 <br><br></label>
+                <label><input type="radio" name="Cc" value="Eight"> 8 <br><br></label>
+                <label><input type="radio" name="Cc" value="Ten"> 10 <br><br></label>
+            </div>
+            <div class="hide">
+                <p>4:&nbsp;Which of The Following is a Universal Selector</p>
+                <label><input type="radio" name="Dd" value="cart"> ~<br><br></label>
+                <label><input type="radio" name="Dd" value="plus"> +<br><br></label>
+                <label><input type="radio" name="Dd" value="Asterisk"> *<br><br></label>
+                <label><input type="radio" name="Dd" value="Percent"> %<br><br></label>
+            </div>
+            <div class="hide">
+                <p>5:&nbsp;What is This Symbol Called <q>></q>
+                </p>
+                <label><input type="radio" name="Ee" value="Sibling"> Sibling Selector<br><br></label>
+                <label><input type="radio" name="Ee" value="Adjacent"> Adjacent Selector<br><br></label>
+                <label><input type="radio" name="Ee" value="Parent"> Parent Selector <br><br></label>
+                <label><input type="radio" name="Ee" value="Child"> Child Selector <br><br></label>
+
+            </div>
+
+            <div class="hide">
+                <p>6:&nbsp;What Color Will This Hex Color Code Output <q>#00ff00</q></p>
+                <label><input type="radio" name="Ff" value="Yellow"> Yellow<br><br></label>
+                <label><input type="radio" name="Ff" value="Green"> Green <br><br></label>
+                <label><input type="radio" name="Ff" value="Purple"> Purple<br><br></label>
+                <label><input type="radio" name="Ff" value="Magneta"> Magneta<br><br></label>
+
+            </div>
+            <div class="hide">
+                <p>7:&nbsp;Choose the Odd One</p>
+                <label><input type="radio" name="Gg" value="relative"> relative <br><br></label>
+                <label><input type="radio" name="Gg" value="Sticky"> sticky<br><br></label>
+                <label><input type="radio" name="Gg" value="absolute"> absolute <br><br></label>
+                <label><input type="radio" name="Gg" value="Transition"> transition<br><br></label>
+
+            </div>
+            <div class="hide">
+                <p>8:&nbsp;Which Grid Property Helps In RWD(Responsive Web Design)
+                </p>
+                <label><input type="radio" name="Pp" value="Column"> Grid-Column<br><br></label>
+                <label><input type="radio" name="Pp" value="Content"> Place-Content<br><br></label>
+                <label><input type="radio" name="Pp" value="Max"> minmax<br><br></label>
+                <label><input type="radio" name="Pp" value="Area"> Grid-Area<br><br></label>
+            </div>
+
+            <div class="hide">
+                <p>9:&nbsp;Which of This is Used To Hide an Element and the Element Still Occupies Space in The DOM
+                </p>
+                <label><input type="radio" name="Ii" value="Opacity"> Opacity<br><br></label>
+                <label><input type="radio" name="Ii" value="display"> display<br><br></label>
+                <label><input type="radio" name="Ii" value="Visible"> Visibility<br><br></label>
+                <label><input type="radio" name="Ii" value="hide"> Hide<br><br></label>
+
+            </div>
+            <div class="hide">
+                <p>10:&nbsp;Media Queries Are Used For</p>
+                <label><input type="radio" name="Ss" value="animate"> Animation<br><br></label>
+                <label><input type="radio" name="Ss" value="effects"> Effects<br><br></label>
+                <label><input type="radio" name="Ss" value="Beautiful"> Making Your Website Beatiful<br><br></label>
+                <label><input type="radio" name="Ss" value="Responsive"> RWD(Responsive Web Design)<br><br></label>
+            </div>
+            <div class="hide" id="not-shown">
+                <button class="anime">End Of Css Quiz</button>
+            </div>
+
+
+        </section>
+        <!--Javascript Questions-->
+        <section class="JavaHide" id="conJs">
+            <div class="show">
+                <p>1:&nbsp;What is Javascript</p>
+                <label><input type="radio" name="Hem" value="Scripting"> Scripting Language<br><br></label>
+                <label><input type="radio" name="Hem" value="Markup"> MarkupLanguage<br><br></label>
+                <label><input type="radio" name="Hem" value="Programming"> Programming Language<br><br></label>
+                <label><input type="radio" name="Hem" value="Interpreted"> Interpreted Language<br><br></label>
+            </div>
+            <div class="hide">
+                <p>2:&nbsp;Javascript is A </p>
+                <label><input type="radio" name="Tem" value="Loosely">Loosely-Typed-Language<br><br></label>
+                <label><input type="radio" name="Tem" value="Dynamic"> Dynamic-Typed-Language<br><br></label>
+                <label><input type="radio" name="Tem" value="Static"> Static-Typed-Language<br><br></label>
+                <label><input type="radio" name="Tem" value="Heavy"> Heavy-Typed-Language<br><br></label>
+            </div>
+            <div class="hide">
+                <p>3:&nbsp;A function That Has No Name Is Called</p>
+                <label><input type="radio" name="Mem" value="Hidden">Hidden Function <br><br></label>
+                <label><input type="radio" name="Mem" value="Dynamic"> Dynamic Fuction <br><br></label>
+                <label><input type="radio" name="Mem" value="Annonymous"> Annonymous Function <br><br></label>
+                <label><input type="radio" name="Mem" value="Static"> Static Fuction<br><br></label>
+            </div>
+            <div class="hide">
+                <p>4:&nbsp;()=>{} is Syntax For Declaring an </p>
+                <label><input type="radio" name="Lem" value="Normal"> Normal Function<br><br></label>
+                <label><input type="radio" name="Lem" value="Regular"> Regular Function<br><br></label>
+                <label><input type="radio" name="Lem" value="Daily"> Daily Fuction <br><br></label>
+                <label><input type="radio" name="Lem" value="Arrow"> Arrow Fuction<br><br></label>
+            </div>
+            <div class="hide">
+                <p>5: Which Of This Is The Symbol for a Ternary Operator
+                </p>
+                <label><input type="radio" name="Cem" value="Hashtag"> #<br><br></label>
+                <label><input type="radio" name="Cem" value="Ternary"> ?<br><br></label>
+                <label><input type="radio" name="Cem" value="Mod"> %<br><br></label>
+                <label><input type="radio" name="Cem" value="Plus"> +<br><br></label>
+
+            </div>
+            <div class="hide">
+                <p>6:&nbsp;<q><></q> Can also Be Called
+                </p>
+                <label><input type="radio" name="dem" value="Greater">Greater-Than-Operator<br><br></label>
+                <label><input type="radio" name="dem" value="Lesser"> Lesser-Than-Operator <br><br></label>
+                <label><input type="radio" name="dem" value="Not"> Not-Operator<br><br></label>
+                <label><input type="radio" name="dem" value="Gl"> Greater-Lesser-Than-Operator<br><br></label>
+
+            </div>
+            <div class="hide">
+                <p>7: If a Promise is resolved which Keyword is used to run code
+                </p>
+                <label><input type="radio" name="AA" value="Catch"> Catch<br><br></label>
+                <label><input type="radio" name="AA" value="Throw"> Throw<br><br></label>
+                <label><input type="radio" name="AA" value="Run"> RunCode<br><br></label>
+                <label><input type="radio" name="AA" value="Then"> Then<br><br></label>
+            </div>
+
+            <div class="hide">
+                <p>8:&nbsp;The Object Created When Java Wrapper Style is Sent to Javascript is Called
+                </p>
+                <label><input type="radio" name="HH" value="Script"> ScriptObject<br><br></label>
+                <label><input type="radio" name="HH" value="java"> JavaObject<br><br></label>
+                <label><input type="radio" name="HH" value="js"> JsObject<br><br></label>
+                <label><input type="radio" name="HH" value="van"> VanillaObject<br><br></label>
+            </div>
+            <div class="hide">
+                <p>9:&nbsp;WhichOf the following is Client Side Javascript Object
+                </p>
+                <label><input type="radio" name="JJ" value="file"> File<br><br></label>
+                <label><input type="radio" name="JJ" value="upload"> FileUpload<br><br></label>
+                <label><input type="radio" name="JJ" value="Fuction"> Function<br><br></label>
+                <label><input type="radio" name="JJ" value="time"> Time<br><br></label>
+            </div>
+            <div class="hide">
+                <p>10:&nbsp;Which Function Of String Object creates an anchor that is used as a hypertext Target
+                </p>
+                <label><input type="radio" name="EE" value="Link"> Link()<br><br></label>
+                <label><input type="radio" name="EE" value="anchor"> anchor()<br><br></label>
+                <label><input type="radio" name="EE" value="target"> target()<br><br></label>
+                <label><input type="radio" name="EE" value="Blink"> Blink()<br><br></label>
+            </div>
+            <div class="hide" id="not-shown">
+                <button class="anime">End Of Javascript Quiz</button>
+            </div>
+        </section>
+        <div class="table" id="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Correct Answers</th>
+                        <th>Wrong Answers</th>
+                        <th> Percentage</th>
+                        <th>Next Section</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td id="correct"></td>
+                    <td id="failed"></td>
+                    <td id="Percent"></td>
+                    <td><button id="next"></button></td>
+
+                </tbody>
+            </table>
+        </div>
+        <button id="sp">Html Performance</button>
+        <button id="cp">Css Performance</button>
+        <button id="jp">Js Performance</button>
     </main>
-    <!--Questions For Css-->
-    <main class="CssHide" id="conCss">
-        <div class="show">
-            <p>1:&nbsp;What is Css</p>
-            <label><input type="radio" name="Aa" value="CrossStyleSheet"> CrossStyleSheet<br><br></label>
-            <label><input type="radio" name="Aa" value="CascadeStylingSheet"> CascadeStylingSheet<br><br></label>
-            <label><input type="radio" name="Aa" value="CascadingStyleSheet"> CascadingStyleSheet<br><br></label>
-            <label><input type="radio" name="Aa" value="ColorStylerSheet"> ColorStylerSheet<br><br></label>
-        </div>
-        <div class="hide">
-            <p>2:&nbsp;Which Of This Is a Property of Flex-container
-            </p>
-            <label><input type="radio" name="Oo" value="AlignItems"> Align-items<br><br></label>
-            <label><input type="radio" name="Oo" value="Align-Self"> Align-Self<br><br></label>
-            <label><input type="radio" name="Oo" value="Grow"> flex-grow<br><br></label>
-            <label><input type="radio" name="Oo" value="Order"> order<br><br></label>
-        </div>
-
-        <div class="hide">
-            <p>3:&nbsp;In how many ways can color be initialized including alpha values</p>
-            <label><input type="radio" name="Cc" value="Four"> 4 <br><br></label>
-            <label><input type="radio" name="Cc" value="Six"> 6 <br><br></label>
-            <label><input type="radio" name="Cc" value="Eight"> 8 <br><br></label>
-            <label><input type="radio" name="Cc" value="Ten"> 10 <br><br></label>
-        </div>
-        <div class="hide">
-            <p>4:&nbsp;Which of The Following is a Universal Selector</p>
-            <label><input type="radio" name="Dd" value="cart"> ~<br><br></label>
-            <label><input type="radio" name="Dd" value="plus"> +<br><br></label>
-            <label><input type="radio" name="Dd" value="Asterisk"> *<br><br></label>
-            <label><input type="radio" name="Dd" value="Percent"> %<br><br></label>
-        </div>
-        <div class="hide">
-            <p>5:&nbsp;What is This Symbol Called <q>></q>
-            </p>
-            <label><input type="radio" name="Ee" value="Sibling"> Sibling Selector<br><br></label>
-            <label><input type="radio" name="Ee" value="Adjacent"> Adjacent Selector<br><br></label>
-            <label><input type="radio" name="Ee" value="Parent"> Parent Selector <br><br></label>
-            <label><input type="radio" name="Ee" value="Child"> Child Selector <br><br></label>
-
-        </div>
-
-        <div class="hide">
-            <p>6:&nbsp;What Color Will This Hex Color Code Output <q>#00ff00</q></p>
-            <label><input type="radio" name="Ff" value="Yellow"> Yellow<br><br></label>
-            <label><input type="radio" name="Ff" value="Green"> Green <br><br></label>
-            <label><input type="radio" name="Ff" value="Purple"> Purple<br><br></label>
-            <label><input type="radio" name="Ff" value="Magneta"> Magneta<br><br></label>
-
-        </div>
-        <div class="hide">
-            <p>7:&nbsp;Choose the Odd One</p>
-            <label><input type="radio" name="Gg" value="relative"> relative <br><br></label>
-            <label><input type="radio" name="Gg" value="Sticky"> sticky<br><br></label>
-            <label><input type="radio" name="Gg" value="absolute"> absolute <br><br></label>
-            <label><input type="radio" name="Gg" value="Transition"> transition<br><br></label>
-
-        </div>
-        <div class="hide">
-            <p>8:&nbsp;Which Grid Property Helps In RWD(Responsive Web Design)
-            </p>
-            <label><input type="radio" name="Pp" value="Column"> Grid-Column<br><br></label>
-            <label><input type="radio" name="Pp" value="Content"> Place-Content<br><br></label>
-            <label><input type="radio" name="Pp" value="Max"> minmax<br><br></label>
-            <label><input type="radio" name="Pp" value="Area"> Grid-Area<br><br></label>
-        </div>
-
-        <div class="hide">
-            <p>9:&nbsp;Which of This is Used To Hide an Element and the Element Still Occupies Space in The DOM
-            </p>
-            <label><input type="radio" name="Ii" value="Opacity"> Opacity<br><br></label>
-            <label><input type="radio" name="Ii" value="display"> display<br><br></label>
-            <label><input type="radio" name="Ii" value="Visible"> Visibility<br><br></label>
-            <label><input type="radio" name="Ii" value="hide"> Hide<br><br></label>
-
-        </div>
-        <div class="hide">
-            <p>10:&nbsp;Media Queries Are Used For</p>
-            <label><input type="radio" name="Ss" value="animate"> Animation<br><br></label>
-            <label><input type="radio" name="Ss" value="effects"> Effects<br><br></label>
-            <label><input type="radio" name="Ss" value="Beautiful"> Making Your Website Beatiful<br><br></label>
-            <label><input type="radio" name="Ss" value="Responsive"> RWD(Responsive Web Design)<br><br></label>
-        </div>
-
-
-    </main>
-    <!--Javascript Questions-->
-    <main class="JavaHide" id="conJs">
-        <div class="show">
-            <p>1:&nbsp;What is Javascript</p>
-            <label><input type="radio" name="Hem" value="Scripting"> Scripting Language<br><br></label>
-            <label><input type="radio" name="Hem" value="Markup"> MarkupLanguage<br><br></label>
-            <label><input type="radio" name="Hem" value="Programming"> Programming Language<br><br></label>
-            <label><input type="radio" name="Hem" value="Interpreted"> Interpreted Language<br><br></label>
-        </div>
-        <div class="hide">
-            <p>2:&nbsp;Javascript is A </p>
-            <label><input type="radio" name="Tem" value="Loosely">Loosely-Typed-Language<br><br></label>
-            <label><input type="radio" name="Tem" value="Dynamic"> Dynamic-Typed-Language<br><br></label>
-            <label><input type="radio" name="Tem" value="Static"> Static-Typed-Language<br><br></label>
-            <label><input type="radio" name="Tem" value="Heavy"> Heavy-Typed-Language<br><br></label>
-        </div>
-        <div class="hide">
-            <p>3:&nbsp;A function That Has No Name Is Called</p>
-            <label><input type="radio" name="Mem" value="Hidden">Hidden Function <br><br></label>
-            <label><input type="radio" name="Mem" value="Dynamic"> Dynamic Fuction <br><br></label>
-            <label><input type="radio" name="Mem" value="Annonymous"> Annonymous Function <br><br></label>
-            <label><input type="radio" name="Mem" value="Static"> Static Fuction<br><br></label>
-        </div>
-        <div class="hide">
-            <p>4:&nbsp;()=>{} is Syntax For Declaring an </p>
-            <label><input type="radio" name="Lem" value="Normal"> Normal Function<br><br></label>
-            <label><input type="radio" name="Lem" value="Regular"> Regular Function<br><br></label>
-            <label><input type="radio" name="Lem" value="Daily"> Daily Fuction <br><br></label>
-            <label><input type="radio" name="Lem" value="Arrow"> Arrow Fuction<br><br></label>
-        </div>
-        <div class="hide">
-            <p>5: Which Of This Is The Symbol for a Ternary Operator
-            </p>
-            <label><input type="radio" name="Cem" value="Hashtag"> #<br><br></label>
-            <label><input type="radio" name="Cem" value="Ternary"> ?<br><br></label>
-            <label><input type="radio" name="Cem" value="Mod"> %<br><br></label>
-            <label><input type="radio" name="Cem" value="Plus"> +<br><br></label>
-
-        </div>
-        <div class="hide">
-            <p>6:&nbsp;<q><></q> Can also Be Called
-            </p>
-            <label><input type="radio" name="dem" value="Greater">Greater-Than-Operator<br><br></label>
-            <label><input type="radio" name="dem" value="Lesser"> Lesser-Than-Operator <br><br></label>
-            <label><input type="radio" name="dem" value="Not"> Not-Operator<br><br></label>
-            <label><input type="radio" name="dem" value="Gl"> Greater-Lesser-Than-Operator<br><br></label>
-
-        </div>
-        <div class="hide">
-            <p>7: If a Promise is resolved which Keyword is used to run code
-            </p>
-            <label><input type="radio" name="AA" value="Catch"> Catch<br><br></label>
-            <label><input type="radio" name="AA" value="Throw"> Throw<br><br></label>
-            <label><input type="radio" name="AA" value="Run"> RunCode<br><br></label>
-            <label><input type="radio" name="AA" value="Then"> Then<br><br></label>
-        </div>
-
-        <div class="hide">
-            <p>8:&nbsp;The Object Created When Java Wrapper Style is Sent to Javascript is Called
-            </p>
-            <label><input type="radio" name="HH" value="Script"> ScriptObject<br><br></label>
-            <label><input type="radio" name="HH" value="java"> JavaObject<br><br></label>
-            <label><input type="radio" name="HH" value="js"> JsObject<br><br></label>
-            <label><input type="radio" name="HH" value="van"> VanillaObject<br><br></label>
-        </div>
-        <div class="hide">
-            <p>9:&nbsp;WhichOf the following is Client Side Javascript Object
-            </p>
-            <label><input type="radio" name="JJ" value="file"> File<br><br></label>
-            <label><input type="radio" name="JJ" value="upload"> FileUpload<br><br></label>
-            <label><input type="radio" name="JJ" value="Fuction"> Function<br><br></label>
-            <label><input type="radio" name="JJ" value="time"> Time<br><br></label>
-        </div>
-        <div class="hide">
-            <p>10:&nbsp;Which Function Of String Object creates an anchor that is used as a hypertext Target
-            </p>
-            <label><input type="radio" name="EE" value="Link"> Link()<br><br></label>
-            <label><input type="radio" name="EE" value="anchor"> anchor()<br><br></label>
-            <label><input type="radio" name="EE" value="target"> target()<br><br></label>
-            <label><input type="radio" name="EE" value="Blink"> Blink()<br><br></label>
-        </div>
-    </main>
-    <div class="table" id="table">
-        <table width="100%" border="2px solid black">
-            <thead>
-                <tr>
-                    <th>Correct Answers</th>
-                    <th>Wrong Answers</th>
-                    <th> Percentage</th>
-                    <th>Next Section</th>
-                </tr>
-            </thead>
-            <tbody>
-                <td id="correct"></td>
-                <td id="failed"></td>
-                <td id="Percent"></td>
-                <td><button id="next"></button></td>
-
-            </tbody>
-        </table>
-    </div>
-    <button id="sp">Html Performance</button>
-    <button id="cp">Css Performance</button>
-    <button id="jp">Js Performance</button>
     <script src="./Logic/logics.js"></script>
-    <script src="quiz.js" type="module"></script>
+    <script src="quiz.js"></script>
 </body>
 
 </html>

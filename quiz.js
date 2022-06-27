@@ -1,5 +1,4 @@
-
-fourth.addEventListener("click", Corrections) // Function executed when Corrections button is Clicked);
+// Function executed when Corrections button is Clicked);
 first.addEventListener("click", () => {
     //This Function is called when html button is clicked
     con.classList.remove("conHide")
@@ -39,26 +38,26 @@ endQuiz.addEventListener("click", () => {
     res.classList.add("ResultHide")
     document.body.style.backgroundColor = "white";
 })
-
 for (let point of htmloptions) {
     //function which goes to next question after a User Selects an Option in Html Section 
 
     point.addEventListener("click", function() {
-        answered.innerHTML = `Questions Answered:${count+1}/10`
+        answered.innerHTML = `Questions Answered:${count + 1 }/10`
+        count++
         answers.forEach((correct) => {
             if (point.value === correct && point.checked) {
                 LeaderBoard[PlayerNames] = correctAnswers.push(point.value)
             }
         })
+        console.log(count)
         setTimeout(() => {
-            count++
             if (allDiv[count].classList.contains("hide")) {
                 allDiv[count].classList.remove("hide")
                 allDiv[count].classList.add("show")
                 allDiv[count - 1].classList.add("hide")
                 allDiv[count - 1].classList.remove("show")
             }
-            if (count +1 === allDiv.length) {
+            if (count === allDiv.length-1) {
                 Hbtn.style.display = "block"
                 Hbtn.style.marginTop = "15px"
             }
@@ -145,15 +144,14 @@ Hbtn.addEventListener("click",HtmlNextLogic);
 Cbtn.addEventListener("click",CssNextLogic);
 Jbtn.addEventListener("click",JsNextLogic);
 //Code Block Logics For Moving To Next Section when Each Section Question Finishes
-
 vew.addEventListener("click", () => {
     //Executed When View Score button is Clicked
 if (disp.classList.contains("Display")) {
         disp.classList.remove("Display")
         let tot = `${ correctAnswers.length + cCorrect.length + jCorrect.length }`
-        let totPer = `${answers.length + cAnswers.length + jAnswers.length }`
+        let perTotal = allAnswers.length 
         total.innerHTML = `Total Score:${tot}`
-        totalPer.innerHTML = `Total Score in Percentage:${Math.floor(tot/totPer* 100)}%`
+        totalPer.innerHTML = `Total Score in Percentage:${Math.floor(tot/perTotal* 100)}%`
 
     } else {
         disp.classList.remove("show")
