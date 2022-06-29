@@ -14,6 +14,7 @@
             font-family: sans-serif;
             margin: 0;
             padding: 0;
+            min-width: 250px;
         }
         
         table {
@@ -27,8 +28,8 @@
         
         table th,
         td {
-            padding: 2em;
-            border: 1px inset black;
+            padding: .5em 0;
+            border: .1px inset black;
         }
         
         #not-shown {
@@ -327,7 +328,7 @@
             .FrontShow {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
+                justify-content: center;
                 flex-wrap: nowrap;
                 gap: 2em;
                 align-items: center;
