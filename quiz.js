@@ -1,4 +1,3 @@
-// Function executed when Corrections button is Clicked);
 first.addEventListener("click", () => {
     //This Function is called when html button is clicked
     con.classList.remove("conHide")
